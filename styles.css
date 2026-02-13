@@ -1,19 +1,9 @@
 body {
-    margin: 40px;
+    margin: 4%;
 }
 
-h1 {
-    background-color: beige;
-    border: 1px solid gray;
-    border-radius: 5px 5px 0px 0px;
-    margin-bottom: -1px;
-    padding: 25px;
-}
-
-form {
-    border: 1px solid gray;
-    border-radius: 0px 0px 5px 5px;
-    padding: 25px;
+header {
+    padding: 2% 2% 1% 2%;
 }
 
 #postalCode button {
@@ -31,9 +21,9 @@ li {
 }
 
 #message {
-    height: 200px;
+    height: 5rem;
 }
 
-.bg-danger-subtle {
-    border-radius: 5px;
+legend {
+    font-size: 1rem;
 }
