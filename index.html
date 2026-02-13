@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment example</title>
+    <script
+      src="https://kit.fontawesome.com/0b77e7860d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Payment form example</h1>
+    <form>
+      <!-- Row 0 (Displayed if any fields are empty) -->
+      <p class="bg-danger-subtle p-2 text-danger">Some fields are missing.</p>
+      <!-- Row 1 -->
+      <span class="row">
+        <div class="mb-3 col-4">
+          <label for="cardNumber" class="form-label">Card#</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="cardNumber"
+            aria-describedby="cardHelp"
+          />
+        </div>
+        <div class="mb-3 col-4">
+          <label for="cvcNumber" class="form-label">CVC#</label>
+          <input type="tel" class="form-control" id="cvcNumber" />
+        </div>
+        <div class="mt-4 col-1 text-end"><h2>$</h2></div>
+        <div class="mb-3 col-3">
+          <label for="amount" class="form-label">Amount</label>
+          <input type="number" class="form-control" id="amount" />
+        </div>
+      </span>
+
+      <!-- Row 2 -->
+      <span class="row">
+        <div class="mb-3 col-6">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" />
+        </div>
+        <div class="mb-3 col-6">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" />
+        </div>
+      </span>
+      <!-- Row 3 -->
+      <span class="row">
+        <div class="mb-3 col-6">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" />
+        </div>
+        <div class="mb-3 col-3">
+          <label for="state" class="form-label">State</label>
+          <!-- Dropdown for state -->
+          <div class="dropdown mb-3 col-3" id="postalCode">
+            <button
+              class="btn btn-outline-secondary border border-secondary-subtle dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Pick a state
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Alabama</a></li>
+              <li><a class="dropdown-item" href="#">Florida</a></li>
+              <li><a class="dropdown-item" href="#">Texas</a></li>
+              <li><a class="dropdown-item" href="#">Another State</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mb-3 col-3">
+          <label for="postalCode" class="form-label">Postal Code</label>
+          <input type="text" class="form-control" id="postalCode" />
+        </div>
+      </span>
+      <!-- Card type selection -->
+      <span class="row border-bottom">
+        <p>We accept:</p>
+        <ul>
+          <li>
+            <input type="radio" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1"
+              ><i class="fa-brands fa-cc-mastercard"></i
+            ></label>
+          </li>
+          <li>
+            <input type="radio" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1"
+              ><i class="fa-brands fa-cc-visa"></i
+            ></label>
+          </li>
+          <li>
+            <input type="radio" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1"
+              ><i class="fa-solid fa-credit-card"></i
+            ></label>
+          </li>
+        </ul>
+      </span>
+      <!-- Buttons -->
+      <span>
+        <button type="submit" class="btn btn-secondary mt-3">Cancel</button>
+        <button type="submit" class="btn btn-primary mt-3">Send</button>
+      </span>
+      <!-- Message is here since I couldn't get it to the right of the radio buttons. -->
+      <span class="row">
+        <div class="mb-3 col-12">
+          <label for="message" class="form-label">Message</label>
+          <input type="textarea" class="form-control" id="message" />
+        </div>
+        <div id="messageHelp" class="form-text">Add notes here.</div>
+      </span>
+    </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
